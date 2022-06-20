@@ -1,0 +1,1 @@
+function Y = ten_mat_mult(T, M, mode)    dT = size(T);     [m1,m2] = size(M);    if (m2 ~= dT(mode))        error('Dimenzije tenzora i matrice nisu odgovarajuce.')    end    dT(mode) = m1;     Y = fold(M * unfold(T, mode), mode, dT); end
