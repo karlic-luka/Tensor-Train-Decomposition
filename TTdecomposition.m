@@ -1,5 +1,5 @@
 function G = TTdecomposition(A)
-  % Za tenzor A proizvoljnog reda vraæa TT-jezgre G_i
+  % Za tenzor A proizvoljnog reda vraca TT-jezgre G_i
   dim = size(A); 
   d = length(dim); 
   r = zeros(d,1);
@@ -12,7 +12,7 @@ function G = TTdecomposition(A)
     else
        C = reshape(C, [r0*dim(k), numel(C)/(r0*dim(k))]);    
     end
-    [U,S,V] = svd(C); 
+    [U,S,V] = svd(C, 'econ'); 
     %[U,S,V] = svds(C,90); 
     %[U,S,V] = qr(C); V0 = V;    
     r(k) = rank(S); 
