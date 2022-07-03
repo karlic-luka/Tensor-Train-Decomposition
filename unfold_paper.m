@@ -1,5 +1,6 @@
-function X_k = unfold(X, dims, k)
+function X_k = unfold_paper(X, k)
 
+    dims = ndims(X);
     rows = 1;
     for i = 1:k
         rows = rows * size(X, i);

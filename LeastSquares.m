@@ -1,6 +1,6 @@
 function person = LeastSquares(A, z)
   % A je tenzor dimenzije (n_i, n_e, n_p), a z test slika od n_i piksela
-  [n_i, n_e, n_p] = size(A);
+  [~, n_e, n_p] = size(A);
   z = z / norm(z);
   for e = 1 : n_e
     A_e = squeeze(A(:,e,:));
