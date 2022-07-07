@@ -1,5 +1,5 @@
 function G = TTdecomposition(A)
-  % Za tenzor A proizvoljnog reda vraca TT-jezgre G_i
+  %TT base of a N-dim tensor
   dim = size(A); 
   d = length(dim); 
   r = zeros(d,1);

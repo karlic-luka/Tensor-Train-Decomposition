@@ -1,8 +1,12 @@
 function person = TT3D(z, G)
-  % A je tenzor dimenzije (n_i, n_e, n_p), a z test slika od n_i piksela
-  %TODO: DOKUMENTACIJA!
+  %TT3D algorithm 4.2 from paper     
+  %https://link.springer.com/article/10.1007/s10092-020-0358-8
+  %input:
+    %G: a tensor of size (n_i, n_e, n_p)
+    %z: image to be classified
+  %output:
+    %index of a recognized person (1 to n_p)
   
-%   [n_i, n_e, n_p] = size(A);
   [n_i, n_e, n_p] = size(G{2});
   z_kappa = G{1}' * z;  
   for e = 1 : n_e

@@ -1,4 +1,4 @@
-function C = ten_mat_multiplication(A, B, mode)
+function C = ten_mat_mult_paper(A, B, mode)
     %input:
         %A: 3d tensor
         %B: matrix

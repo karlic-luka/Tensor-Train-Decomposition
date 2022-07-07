@@ -1,3 +1,5 @@
+%used for testing different approaches
+
 number_of_tests = 10;
 batch = randi(50, 1, number_of_tests);
 batch
@@ -24,7 +26,7 @@ for(i = 1:number_of_tests)
     percentage = RunAlgorithmTT4D(fea_Train, fea_Test, gnd_Test);
     data(i, 2) = percentage;
     fprintf('Percentage of correct recognitions for TT4D: %s %% \n', num2str(percentage * 100));
-    %TT4D
+    %LS
     percentage = RunAlgorithmLeastSquares(fea_Train, fea_Test, gnd_Test);
     data(i, 3) = percentage;
     fprintf('Percentage of correct recognitions for LeastSquares: %s %% \n', num2str(percentage * 100));
