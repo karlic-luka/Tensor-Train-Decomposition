@@ -1,5 +1,5 @@
 function percentage = RunAlgorithmTT3D(train, test, gt)
-
+    %TODO: optimize - lots of redundant operations 
     %input:
         %train: train dataset
         %test: test dataset

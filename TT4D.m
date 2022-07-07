@@ -1,5 +1,11 @@
 function person = TT4D(z, G)
-  % A je tenzor dimenzije (n_1, n_2, n_e, n_p), a z test slika od n_i piksela
+  %TT4D algorithm from paper     
+  %https://link.springer.com/article/10.1007/s10092-020-0358-8
+  %input:
+    %G: a tensor of size (width, height, n_e, n_p)
+    %z: image to be classified
+  %output:
+    %index of a recognized person (1 to n_p)
   [~, n_e, n_p] = size(G{3});
   
   G12 = ten_mat_mult(G{2}, G{1}, 1);

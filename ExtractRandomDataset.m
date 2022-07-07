@@ -1,6 +1,9 @@
 function [fea_Train, fea_Test, gnd_Train, gnd_Test] = ExtractRandomDataset(fea, gnd, data_index)
-%input:
-    %data_index: index of a folder (1 to 50)
+    %Method that splits dataset into train and test
+    %e.g. http://www.cad.zju.edu.cn/home/dengcai/Data/FaceData.html
+    %extended yale face database B 32x32
+    %input:
+        %data_index: index of a folder (1 to 50)
     
 addpath('data/50Train');
 if(~(1 <= data_index <= 50))

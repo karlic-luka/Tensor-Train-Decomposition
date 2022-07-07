@@ -1,5 +1,12 @@
 function person = LeastSquares(A, z)
-  % A je tenzor dimenzije (n_i, n_e, n_p), a z test slika od n_i piksela
+    %Least squares method for image classification
+    %Algorithm 4.1 from paper 
+    %https://link.springer.com/article/10.1007/s10092-020-0358-8
+    %input:
+        %A: tensor of (n_i, n_e, n_p)
+        %z: image to be classified; size n_i
+    %output:
+        %index of a recognized person (1 to n_p)
   [~, n_e, n_p] = size(A);
   z = z / norm(z);
   for e = 1 : n_e
